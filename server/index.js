@@ -75,6 +75,10 @@ app.post("/api/optimize", async (req, res) => {
   res.json({ result });
 });
 
+app.get("/health", (req, res) => {
+  res.json({ status: "OK", service: "CodeGuardian backend running" });
+});
+
 // ===============================
 // 🔹 START SERVER
 // ===============================
